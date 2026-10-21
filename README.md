@@ -8,3 +8,4 @@ I chose a teal-and-orange colour palette to create a calm but energetic visual i
 ## Current stage
 
 Part 1: HTML structure and responsive UI.
+Part 1 is complete: the responsive UI is ready for image-fetching functionality in Part 2.
