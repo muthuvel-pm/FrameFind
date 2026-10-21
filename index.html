@@ -1,26 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelPulse</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrameFind | Visual Discovery</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- UI goes here (next block) -->
-   <header>
-  <h1>PixelPulse</h1>
-  <form id="search-form">
-    <input id="search-input" type="search" placeholder="Search images..." />
-    <button type="submit">Search</button>
-  </form>
-</header>
+    <header class="site-header">
+        <a href="#" class="logo">Frame<span>Find.</span></a>
+        <p class="tagline">Find inspiration, one image at a time.</p>
+        <span class="header-label">VISUAL DISCOVERY</span>
+    </header>
 
-<main>
-  <p id="status"></p>
-  <section id="results"></section>
-</main>
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
+            <h1>What do you want<br />to <span>discover?</span></h1>
+            <p class="description">
+                Explore visual inspiration from nature, architecture,
+                travel and everything in between.
+            </p>
+        </section>
 
-  <script src="script.js"></script>
+        <section class="search-section">
+            <form id="search-form">
+                <label for="search-input">Search for inspiration</label>
+
+                <div class="search-bar">
+                    <input
+                        id="search-input"
+                        type="search"
+                        placeholder="Try “mountains”, “minimalism”..."
+                        aria-label="Search for images"
+                    />
+                    <button id="search-button" type="submit">
+                        Search <span aria-hidden="true">↗</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="suggestions">
+                <span class="suggestion-label">QUICK EXPLORE</span>
+                <div class="chip-list">
+                    <button class="chip" type="button">🌿 Nature</button>
+                    <button class="chip" type="button">🏙️ Architecture</button>
+                    <button class="chip" type="button">🐾 Animals</button>
+                    <button class="chip" type="button">🌊 Ocean</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-heading">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL GALLERY</p>
+                    <h2>Ready to explore</h2>
+                </div>
+                <span id="result-count">0 images</span>
+            </div>
+
+            <p id="status" aria-live="polite">
+                Your canvas is empty — search for something you love.
+            </p>
+
+            <section id="results" aria-label="Image search results"></section>
+        </section>
+    </main>
+
+    <footer>
+        <p>FrameFind <span>© 2026</span></p>
+        <p>Made for the endlessly curious.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
